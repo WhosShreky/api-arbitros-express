@@ -6,8 +6,8 @@ const arbitroController = require('../controllers/arbitroController');
 router.get('/', arbitroController.list);
 // Simula arbitros con imágenes (S3) — poner antes de '/:id' para que no choque con el parámetro
 router.get('/con-imagenes', arbitroController.listWithImages);
-// Get single arbitro
-router.get('/:id', arbitroController.getById);
+// Get single arbitro (solo ids numéricos) — evita que rutas literales como '/con-imagenes' colisionen
+router.get('/:id(\\d+)', arbitroController.getById);
 // Dashboard for arbitro
 router.get('/:id/dashboard', arbitroController.dashboard);
 // Matches

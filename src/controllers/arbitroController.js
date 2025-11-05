@@ -67,26 +67,22 @@ exports.liquidaciones = async (req, res) => {
   }
 };
 
-// Endpoint de ejemplo que devuelve árbitros con imágenes (simulado desde S3)
+// Endpoint que devuelve árbitros con URLs de imagen construidas desde los seeds y `awsS3` helper
+const seed = require('../../seeds/arbitros.json');
+const { publicUrlForKey } = require('../config/awsS3');
+
 exports.listWithImages = async (req, res) => {
   try {
-    const arbitros = [
-      {
-        id: 1,
-        nombre: 'Juan Pérez',
-        imagen: 'https://arbitros-imagenes-fredy.s3.amazonaws.com/arbitro1.jpg'
-      },
-      {
-        id: 2,
-        nombre: 'María García',
-        imagen: 'https://arbitros-imagenes-fredy.s3.amazonaws.com/arbitro2.jpg'
-      },
-      {
-        id: 3,
-        nombre: 'Carlos López',
-        imagen: 'https://arbitros-imagenes-fredy.s3.amazonaws.com/arbitro3.jpg'
-      }
-    ];
+    // Mapear seed -> objeto público y construir imageUrl usando publicUrlForKey
+    const arbitros = seed.map(s => ({
+      id: s.id,
+      username: s.username,
+      name: s.name,
+      email: s.email,
+      phone: s.phone,
+      imageKey: s.imageKey,
+      imageUrl: publicUrlForKey(s.imageKey)
+    }));
 
     const containerId = os.hostname();
 
