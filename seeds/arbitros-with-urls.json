@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "username": "arbitro1",
+    "name": "Juan Perez",
+    "email": "juan.perez@example.com",
+    "phone": "123456789",
+    "imageKey": "goku.jpg",
+    "password": "password1",
+    "passwordHash": "$2a$08$DzC54qx.ZDGV7.o0tl1jP.4v7xgbJlNdkTv63cP9yVbG22wreXHSK",
+    "imageUrl": "/images/goku.jpg"
+  },
+  {
+    "id": "2",
+    "username": "arbitro2",
+    "name": "María Gómez",
+    "email": "maria.gomez@example.com",
+    "phone": "987654321",
+    "imageKey": "arbitro2.jpg",
+    "password": "password2",
+    "passwordHash": "$2a$08$e9gyNdIb.TPZYVhxAZDCv.C9Fks1hpH2w.1vkTlgSqXpo9Xi.Geru",
+    "imageUrl": "/images/arbitro2.jpg"
+  },
+  {
+    "id": "3",
+    "username": "arbitro3",
+    "name": "Lucas Martínez",
+    "email": "lucas.m@example.com",
+    "phone": "111222333",
+    "imageKey": "arbitro3.jpg",
+    "password": "password3",
+    "passwordHash": "$2a$08$7C41P8CDqHSStM1IRackL./9r6YauKD0oCcZKnsjPr7zFCl8jkVe.",
+    "imageUrl": "/images/arbitro3.jpg"
+  },
+  {
+    "id": "4",
+    "username": "arbitro4",
+    "name": "Catalina Ruiz",
+    "email": "catalina.r@example.com",
+    "phone": "444555666",
+    "imageKey": "arbitro4.jpg",
+    "password": "password4",
+    "passwordHash": "$2a$08$0L9hO95YETvfwsYvjqliGOY4JwcoOusH1PCoCRh5B3ZGGDEg7DN/m",
+    "imageUrl": "/images/arbitro4.jpg"
+  },
+  {
+    "id": "5",
+    "username": "arbitro5",
+    "name": "Fernando Ortiz",
+    "email": "fernando.o@example.com",
+    "phone": "555666777",
+    "imageKey": "arbitro5.jpg",
+    "password": "password5",
+    "passwordHash": "$2a$08$g17GuhQ1GAuvNDQjJ8XXv.Ka.Lr4i2Q.80UFbuEXscIXQReo5p7.C",
+    "imageUrl": "/images/arbitro5.jpg"
+  },
+  {
+    "id": "6",
+    "username": "arbitro6",
+    "name": "Laura Díaz",
+    "email": "laura.d@example.com",
+    "phone": "666777888",
+    "imageKey": "arbitro6.jpg",
+    "password": "password6",
+    "passwordHash": "$2a$08$1cmFL8VRlDtvFj32TxnZoea1u8KxFvS2xfZyIzwnFStYzJNRLOo5O",
+    "imageUrl": "/images/arbitro6.jpg"
+  },
+  {
+    "id": "7",
+    "username": "arbitro7",
+    "name": "Diego Fernández",
+    "email": "diego.f@example.com",
+    "phone": "777888999",
+    "imageKey": "arbitro7.jpg",
+    "password": "password7",
+    "passwordHash": "$2a$08$VmSiX9gR5AyRVYDOKbFN5.LE6winxUxf4fKAu2itjLrPfYzfj6Fn.",
+    "imageUrl": "/images/arbitro7.jpg"
+  },
+  {
+    "id": "8",
+    "username": "arbitro8",
+    "name": "Valeria Sosa",
+    "email": "valeria.s@example.com",
+    "phone": "888999000",
+    "imageKey": "arbitro8.jpg",
+    "password": "password8",
+    "passwordHash": "$2a$08$KdF1Rhtq9ghWs1sZcMmzo.LzZ0Gl.T2rQEjG5Y/Otlxmy5mry2yd6",
+    "imageUrl": "/images/arbitro8.jpg"
+  }
+]

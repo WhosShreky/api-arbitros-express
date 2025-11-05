@@ -1,0 +1,6 @@
+node_modules
+npm-debug.log
+.DS_Store
+seeds/arbitros-with-urls.json
+.env
+.env.local
