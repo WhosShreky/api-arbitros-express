@@ -69,7 +69,6 @@ exports.liquidaciones = async (req, res) => {
 
 // Endpoint que devuelve árbitros con URLs de imagen construidas desde los seeds y `awsS3` helper
 const seed = require('../../seeds/arbitros.json');
-const { publicUrlForKey } = require('../config/awsS3');
 
 exports.listWithImages = async (req, res) => {
   try {
