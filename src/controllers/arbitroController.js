@@ -69,25 +69,39 @@ exports.liquidaciones = async (req, res) => {
 
 // Endpoint que devuelve árbitros con URLs de imagen construidas desde los seeds y `awsS3` helper
 const seed = require('../../seeds/arbitros.json');
+const { publicUrlForKey } = require('../config/awsS3');
 
 exports.listWithImages = async (req, res) => {
   try {
-    // Mapear seed -> objeto público y construir imageUrl usando publicUrlForKey
-    const arbitros = seed.map(s => ({
-      id: s.id,
-      username: s.username,
-      name: s.name,
-      email: s.email,
-      phone: s.phone,
-      imageKey: s.imageKey,
-      imageUrl: publicUrlForKey(s.imageKey)
-    }));
+    // Simulación de árbitros con imágenes desde S3
+    const arbitros = [
+      {
+        id: 1,
+        nombre: "Juan Pérez",
+        imagen: "https://bucketarbitros.s3.amazonaws.com/arbitro1.jpg"
+      },
+      {
+        id: 2,
+        nombre: "María García",
+        imagen: "https://bucketarbitros.s3.amazonaws.com/arbitro2.jpg"
+      },
+      {
+        id: 3,
+        nombre: "Carlos López",
+        imagen: "https://bucketarbitros.s3.amazonaws.com/arbitro3.jpg"
+      }
+    ];
 
+    // Obtener el ID del contenedor (hostname)
     const containerId = os.hostname();
 
-    res.json({ containerId, timestamp: new Date().toISOString(), arbitros });
+    res.json({
+      containerId: containerId,
+      timestamp: new Date().toISOString(),
+      arbitros: arbitros
+    });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'server error' });
+    console.error('ERROR:', err);
+    res.status(500).json({ error: 'server error', detail: err.message, stack: err.stack });
   }
 };
